@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app='DataModule'>
+<head>
+    <meta charset="UTF-8">
+    <title>Samples of the book</title>
+    <script src="angular.js"></script>
+    <script src='controllers.js'></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+    <body>
+        <h2 class='title'>AngularJS</h2>
+        <h5 class='author'>O'RELLY <i>Brad Green and Shyam Seshadri</i></h5>
+        <div class='navigation' ng-controller='SamplesListController'>
+            <ul>
+                <li ng-repeat='chapter in chapters'>
+    <!--                    <div ng-show='{{chapter.samples.length > 0}}'> don't work! -->
+                    <div class='menu-visible-{{chapter.samples.length > 0}}'>
+                        <h5>
+                            <span class='chapter' ng-click='selectChapter($index)'>
+                                <span ng-bind='chapter.name'></span>
+                            </span>
+                        </h5>
+                        <ul>
+                            <li ng-repeat='sample in chapter.samples' class='chapter-selected-{{$parent.$index==selectedChapter}}'>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <a ng-href='angularjs-book-master/chapter{{$parent.$index + 1}}/{{sample.fileName}}.html'>
+                                                <span ng-bind='sample.name'></span>
+                                            </a>
+                                        </td>
+                                        <td class='pageNumber'>
+                                            p. <span ng-bind='sample.pageNumber'></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
