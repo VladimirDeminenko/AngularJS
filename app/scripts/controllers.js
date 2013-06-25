@@ -29,13 +29,13 @@ dataModule.factory('Chapters', function() {
     chapters.query = function() {
         // In real apps, we'd pull this data from the server...
 
-        var samples1 = [
+        const samples1 = [
             {name: 'Hello World Javascript', fileName: 'hello-world-js', pageNumber: 2},
             {name: 'Hello Dynamic', fileName: 'HelloDynamic', pageNumber: 4},
             {name: 'Order Form', fileName: 'order-form', pageNumber: 6}
         ];
 
-        var samples2 = [
+        const samples2 = [
             {name: '1. Data Binding', fileName: '1.dataBinding', pageNumber: 13},
             {name: '2. Data Binding - Proper Form', fileName: '2.dataBinding - proper form', pageNumber: 14},
             {name: 'Startup', fileName: 'startup', pageNumber: 16},
@@ -61,23 +61,23 @@ dataModule.factory('Chapters', function() {
             {name: 'Form Validation', fileName: 'formValidation', pageNumber: 45}
         ];
 
-        var samples3 = [
+        const samples3 = [
             {name: 'Web-Server ', fileName: 'sample-app/app/index', pageNumber: 51}
         ];
 
-        var samples4 = [
+        const samples4 = [
         ];
 
-        var samples5 = [
+        const samples5 = [
         ];
 
-        var samples6 = [
+        const samples6 = [
         ];
 
-        var samples7 = [
+        const samples7 = [
         ];
 
-        var samples8 = [
+        const samples8 = [
         ];
 
         return [
